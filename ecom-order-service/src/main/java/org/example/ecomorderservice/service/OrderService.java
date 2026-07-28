@@ -52,11 +52,13 @@ public class OrderService {
     private void updateInventory(Inventory inventory) {
         if(inventory.getQuantity()>0) inventory.setQuantity(inventory.getQuantity()-1);
 
-        restClient.put()
+        inventoryClient.updateInventory(inventory);
+
+/*        restClient.put()
                 .uri("http://localhost:8081/inventory")
                 .body(inventory)
                 .retrieve()
-                .toBodilessEntity();
+                .toBodilessEntity();*/
     }
 
 }
