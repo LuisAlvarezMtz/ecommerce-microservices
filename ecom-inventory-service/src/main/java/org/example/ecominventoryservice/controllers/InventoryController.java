@@ -14,11 +14,8 @@ public class InventoryController {
         this.inventoryService = inventoryService;
     }
     @GetMapping("/{productId}")
-    public String checkInventory(@PathVariable String productId){
-         System.out.println("checking inventory to order");
-        return productId.equals("1") ?
-                "In Stock":
-                "Out of Stock";
+    public Inventory checkInventory(@PathVariable Long productId){
+        return inventoryService.checkStock(productId);
     }
 
     @PostMapping

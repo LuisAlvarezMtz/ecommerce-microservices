@@ -1,6 +1,7 @@
 package org.example.ecomorderservice.controller;
 
 
+import org.example.ecomorderservice.dto.Inventory;
 import org.example.ecomorderservice.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ public class OrderController {
     }
 
     @PostMapping("/{productId}")
-    public String placeOrder(@PathVariable String productId){
+    public String placeOrder(@PathVariable Long productId){
         return orderService.placeOrder(productId);
     }
 

@@ -12,6 +12,7 @@ public class InventoryService {
 
     @Autowired
     InventoryRepository repository;
+
     public Inventory checkStock(Long productId) {
         Optional<Inventory> inv = repository.findById(productId);
         return inv.get();
