@@ -17,3 +17,7 @@ spring:
     show-sql: true
 server:
   port: 8081
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
