@@ -7,3 +7,7 @@ server:
 logging:
   level:
     org.example.ecomorderservice.client: DEBUG
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
