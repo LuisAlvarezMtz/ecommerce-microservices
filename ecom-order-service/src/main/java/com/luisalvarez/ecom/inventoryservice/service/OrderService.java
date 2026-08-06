@@ -46,6 +46,8 @@ public class OrderService {
                 "Order not placed";
     }
 
+
+
     private void updateInventory(Inventory inventory) {
         if(inventory.getQuantity()>0) inventory.setQuantity(inventory.getQuantity()-1);
 
