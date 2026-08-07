@@ -15,3 +15,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     prefer-ip-address: true
+
+resilience4j:
+  ratelimiter:
+    instances:
+      inventoryService:
+        limit-for-period: 2
+        limit-refresh-period: 10s
+        timeout-duration: 0s
