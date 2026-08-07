@@ -20,7 +20,7 @@ public class OrderController {
 
     @PostMapping("/{productId}")
     public Inventory placeOrder(@PathVariable Long productId){
-        return inventoryService.getInventory(productId);
+        return inventoryService.getInventory(productId).join();
     }
 
 }

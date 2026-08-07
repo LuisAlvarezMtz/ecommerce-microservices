@@ -44,3 +44,8 @@ resilience4j:
         permitted-number-of-calls-in-half-open-state: 3
         max-wait-duration-in-half-open-state: 5s
         automatic-transition-from-open-to-half-open-enabled: true
+  timelimiter:
+    instances:
+      inventoryServiceTimeLimiter:
+        timeout-duration: 2s
+        cancel-running-future: true
